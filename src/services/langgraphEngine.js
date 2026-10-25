@@ -159,7 +159,7 @@ export class LangGraphEngine {
       ? 'https://api.groq.com/openai/v1/chat/completions'
       : 'https://api.openai.com/v1/chat/completions';
       
-    const model = provider === 'groq' ? 'llama-3.3-70b-versatile' : 'gpt-4o';
+    const model = provider === 'groq' ? 'openai/gpt-oss-120b' : 'gpt-4o';
 
     const response = await fetch(endpoint, {
       method: 'POST',
